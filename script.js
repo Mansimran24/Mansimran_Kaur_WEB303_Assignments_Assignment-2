@@ -1,48 +1,19 @@
 // WEB303 Assignment 2
 // Mansimran Kaur
+
 $(document).ready(function () {
     $("#prospect").on("click", function () {
-      let xhr = new XMLHttpRequest();
+      let abcd = new XMLHttpRequest();
   
-      xhr.open("GET", "prospect.html", true);
+      abcd.open("GET", "prospect.html", true);
   
-      xhr.onload = function () {
-        if (xhr.status == 200) {
-          let getProspect = document.getElementById("content");
-          getProspect.style.display = "block";
-          getProspect.innerHTML = xhr.responseText;
+      abcd.onload = function () {
+        if (abcd.status == 200) {
+          let Pro = document.getElementById("content");
+          Pro.style.display = "block";
+          Pro.innerHTML = abcd.responseText;
         }
       };
-      xhr.send();
+      abcd.send();
     });
-    $("#convert").on("click", function () {
-        let xhr = new XMLHttpRequest();
-    
-        xhr.open("GET", "convert.html", true);
-    
-        xhr.onload = function () {
-          if (xhr.status == 200) {
-            let getConvert = document.getElementById("content");
-            getConvert.style.display = "block";
-            getConvert.innerHTML = xhr.responseText;
-          }
-        };
-        xhr.send();
-      });
-      $("#retain").on("click", function () {
-        let xhr = new XMLHttpRequest();
-    
-        xhr.open("GET", "retain.html", true);
-    
-        xhr.onload = function () {
-          if (xhr.status == 200) {
-            let getRetain = document.getElementById("content");
-            getRetain.style.display = "block";
-            getRetain.innerHTML = xhr.responseText;
-          }
-        };
-        xhr.send();
-      });
-  
-    
   });
